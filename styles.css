@@ -32,15 +32,15 @@ h1 {
   padding-bottom: 20px;
 }
 
+p {
+  line-height: 22px;
+}
+
 p,
 input,
 select,
 textarea {
   font-size: var(--body-font-size);
-}
-
-p {
-  line-height: 20px;
 }
 
 label {
@@ -64,7 +64,7 @@ form {
   padding: 40px 30px;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 20px;
+  gap: 25px;
 }
 
 input,
@@ -80,6 +80,12 @@ button {
   -moz-border-radius: 15px;
   -ms-border-radius: 15px;
   -o-border-radius: 15px;
+}
+
+input,
+textarea,
+select{
+    color: var(--text-color);
 }
 
 .form-group {
@@ -103,13 +109,13 @@ button {
 .container-text {
   width: 315px;
   text-align: center;
-  margin: 20px auto;
+  margin: 10px auto;
 }
 
 .container-form {
   width: 90%;
-  height: auto;
-  margin: 30px auto;
+  height: 900px;
+  margin: 60px auto;
   background-color: #cdd5e042;
   border-radius: 25px;
   -webkit-border-radius: 25px;
@@ -129,9 +135,51 @@ button {
   background-size: 1.5em auto, 100%;
 }
 
+::placeholder {
+  color: var(--form);
+  font-weight: normal;
+}
+
 @media screen and (min-width: 1024px) {
   .form-group {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+
+  .container-text {
+    width: 450px;
+    margin: 20px auto;
+  }
+
+  .container-form {
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container-form {
+    width: 63%;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  p {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+
+  .container-text {
+    width: 650px;
   }
 }
