@@ -1,9 +1,8 @@
 :root {
-  --button-color: #4036a9;
+  --button-text-color: #4036a9;
   --text-color: #111729;
   --form: #cdd5e0;
   --titles-color: #f8fafc;
-  --bg-color: #422698;
   --heading-font-size: 2rem;
   --body-font-size: 1rem;
   --label-font-size: 0.875rem;
@@ -19,7 +18,6 @@
 body {
   min-height: 100vh;
   min-width: 350px;
-  /* background-color: var(--bg-color); */
 }
 
 h1,
@@ -53,7 +51,7 @@ label {
 button {
   font-size: var(--button-font-size);
   background-color: #ffffff;
-  color: var(--button-color);
+  color: var(--button-text-color);
 }
 
 textarea {
@@ -84,14 +82,13 @@ button {
 
 input,
 textarea,
-select{
-    color: var(--text-color);
+select {
+  color: var(--text-color);
 }
 
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+::placeholder {
+    color: var(--form);
+    font-weight: normal;
 }
 
 .container {
@@ -124,6 +121,12 @@ select{
   -o-border-radius: 25px;
 }
 
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .select-css {
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -135,24 +138,19 @@ select{
   background-size: 1.5em auto, 100%;
 }
 
-::placeholder {
-  color: var(--form);
-  font-weight: normal;
-}
-
 @media screen and (min-width: 1024px) {
-  .form-group {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  h1 {
+  .container-text__title {
     font-size: 3rem;
   }
 
-  p {
+  .container-text__description {
     font-size: 1.2rem;
     line-height: 2rem;
+  }
+
+  .form-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 
   .container-text {
@@ -166,17 +164,16 @@ select{
 }
 
 @media screen and (min-width: 1280px) {
-  .container-form {
-    width: 63%;
-  }
-
-  h1 {
+  .container-text__title {
     font-size: 4rem;
   }
 
-  p {
+  .container-text__description {
     font-size: 2rem;
     line-height: 3rem;
+  }
+  .container-form {
+    width: 63%;
   }
 
   .container-text {
